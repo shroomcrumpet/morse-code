@@ -44,8 +44,10 @@ function morse (splitArray) {
     for (var i = 0; i < splitArray.length; i++) {
 
         var key = splitArray[i];
-        translatedArray.push(alphabet[key]);
 
+        if (alphabet[key] !== undefined) {
+        translatedArray.push(alphabet[key]);
+        }
     }
 
     return translatedArray;
